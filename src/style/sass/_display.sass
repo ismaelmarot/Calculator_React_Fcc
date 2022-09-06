@@ -1,0 +1,15 @@
+@use '_variables' as var
+@use '_mixins' as mix
+
+/*========== STYLES =============================================*/
+.display  
+  @include mix.flexRow(flex-end,center)
+  height: 3rem
+  margin: 1rem
+  padding: 11px 30px 11px 11px
+  border: .2rem solid nth(var.$colors,3)
+  border-radius: 1rem
+  font-size: nth(var.$fonts-sizes,2)
+  font-weight: bold
+  background-color: nth(var.$colors,8)
+  color: nth(var.$colors,3)

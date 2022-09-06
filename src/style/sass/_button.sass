@@ -1,0 +1,26 @@
+@use '_variables' as var
+@use '_mixins' as mix
+
+/*========== STYLES =============================================*/
+
+.button
+  @include mix.flexColumn(center,center)
+  flex: 1 1
+  @include mix.setHeightWidth(4rem,4rem)
+  max-width: 4rem
+  margin: .3rem
+  background-color: nth(var.$colors,1)
+  color: nth(var.$colors,3)
+  border: .2rem solid nth(var.$colors,3)
+  border-radius: .5rem
+  font-size: 2rem 
+  font-weight: bold
+  cursor: pointer
+  user-select: none
+  &:hover
+    background-color: nth(var.$colors,6)
+  
+.button-operator
+  background-color: nth(var.$colors,5)
+  &:hover
+    background-color: nth(var.$colors,7)

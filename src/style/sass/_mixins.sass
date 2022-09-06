@@ -1,0 +1,32 @@
+/*========== MIXINS ==========*/
+@mixin flexRow($mainAxisValue,$crossAxisValue)
+  display: flex
+  display: -webkit-box
+  display: -ms-flexbox
+  @include justifyContent($mainAxisValue)
+  @include alignItems($crossAxisValue)
+
+@mixin flexColumn($mainAxisValue,$crossAxisValue)
+  flex-direction: column
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  @include flexRow($mainAxisValue,$crossAxisValue)
+
+@mixin justifyContent($mainAxisValue)
+  justify-content: $mainAxisValue
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+
+@mixin alignItems($crossAxisValue)
+  align-items: $crossAxisValue
+  -webkit-box-align: center
+  -ms-flex-align: center
+	
+@mixin setHeightWidth($height,$width)
+  height: $height
+  width: $width
+
+
+  
+  
